@@ -56,7 +56,7 @@ export default class Category extends CatalogPage {
             template: {
                 productListing: 'f/category/product-listing',
                 sidebar: 'category/sidebar',
-                headerTitle: 'f/category/header-title',
+                headerTitle: 'f/category/header-title-onlinevisions',
                 itemsPerPage: 'f/category/show-amount',
             },
             showMore: 'category/show-more',

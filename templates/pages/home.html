@@ -29,7 +29,6 @@ blog:
             {{> components/common/alert-info message}}
         {{/if}}
     {{/each}}
-
 <div class="main full flex-container {{#if theme_settings.carousel-type "===" "storyboard"}}
     {{#if carousel.slides.length ">" 1}}
     flex-container--carousel-more-than-one
@@ -75,10 +74,10 @@ blog:
     {{/if}}
     {{/if}}
 {{/if}}">
+    {{{region name="home_sidebar_menu"}}}
     {{> components/f/hero/hero}}
-    {{#if customer}}
-      {{> components/f/b2b/account-bar}}
-    {{/if}}
+    {{{region name="home_browse_by_brand"}}}
+    {{{region name="home_browse_by_categories"}}}
     {{#if theme_settings.show_homepage_featured_categories}}
         <div class="flex-component__mobileUp-1">
             {{{region name="home_above_featured_categories"}}}
@@ -113,9 +112,10 @@ blog:
         <div class="flex-component__mobileUp-4">
             {{{region name="home_above_new_products"}}}
             {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count urls=urls}}
-            {{{region name="home_below_new_products"}}}
         </div>
     {{/if}}
+
+    {{{region name="home_below_new_products"}}}
 
     {{#if settings.blog_enabled}}
         <div class="flex-component__mobileUp-6">
@@ -140,4 +140,4 @@ blog:
     {{/if}}
 </div>
 {{/partial}}
-{{> layout/base}}
+{{> layout/base-onlinevisions}}

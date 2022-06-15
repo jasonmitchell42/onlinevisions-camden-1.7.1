@@ -47,26 +47,26 @@
             {{> components/common/cookie}}
         {{/and}}
 
-        {{> components/common/header }}
+        {{> components/common/header-onlinevisions }}
         {{#or customer (if theme_settings.restrict_to_login '!==' 2) (if page_type '===' 'page') (if page_type '===' 'page_contact_form') (if page_type '===' 'newsletter_subscribe') (if page_type '===' 'createaccount') (if page_type '===' 'forgotpassword') (if page_type '===' 'getnewpassword')}}
             {{#if theme_settings.restrict_to_login '===' 2}}
                 {{#and theme_settings.restrict_new_accounts (if customer_group_id '===' 0)}}
                     {{#or (if page_type '===' 'page') (if page_type '===' 'page_contact_form') (if page_type '===' 'newsletter_subscribe') (if page_type '===' 'createaccount') (if page_type '===' 'forgotpassword') (if page_type '===' 'getnewpassword')}}
-                        {{> components/onlinevisions/common/body }}
+                        {{> components/common/body-onlinevisions }}
                     {{else}}
                         {{> components/f/b2b/body-lockdown }}
                     {{/or}}
                 {{else}}
-                    {{> components/onlinevisions/common/body }}
+                    {{> components/common/body-onlinevisions }}
                 {{/and}}
             {{else}}
-                {{> components/onlinevisions/common/body }}
+                {{> components/common/body-onlinevisions }}
             {{/if}}
         {{else}}
             {{> components/f/b2b/body-lockdown }}
         {{/or}}
 
-        {{> components/onlinevisions/common/footer }}
+        {{> components/common/footer-onlinevisions }}
 
         <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
         <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
