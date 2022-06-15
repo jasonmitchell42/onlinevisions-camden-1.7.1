@@ -1,0 +1,185 @@
+.footer-info-col {
+    &[data-section-type="footer-logo"] img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: none;
+    }
+}
+
+.footer {
+  [data-content-region="footer-logo-content--global"],
+  [data-content-region="footer-newsletter-content--global"] {
+    margin-bottom: 34px;
+    div {
+      padding: 0 !important;
+    }
+    span {
+      text-align: left;
+      letter-spacing: 0px;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 28px;
+      font-weight: 400;
+      strong {
+        text-align: left;
+        font-size: 15px;
+        line-height: 23px;
+        letter-spacing: 0px;
+        color: #ffffff;
+        display: block;
+        margin-bottom: 14px;
+      }
+      br {
+        display: none;
+      }
+    }
+  }
+
+  [data-content-region="footer-newsletter-content--global"] {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 801px) {
+  .footer {
+    .footer-info-heading {
+      .icon.arrow-down {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .footer {
+    .container--footer {
+      padding-top: 30px;
+    }
+    .footer-info-col--social {
+      margin-bottom: 35px;
+    }
+    .footer-info-col {
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      &[data-section-type="footer-logo"] {
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .content-custom {
+          order: 2;
+          [data-content-region="footer-logo-content--global"] {
+            text-align: center;
+            margin-bottom: 10px;
+            span {
+              text-align: center;
+              strong {
+                text-align: center;
+              }
+            }
+          }
+        }
+        & > img {
+          order: 1;
+          display: block;
+          margin-bottom: 35px;
+        }
+      }
+      &[data-section-type="footer-categories"] {
+        .footer-info-heading {
+          border-top: 1px solid #707070;
+        }
+      }
+      &.footer-info-col--subscription {
+        .content-custom {
+          [data-content-region="footer-newsletter-content--global"] {
+            span {
+              font-size: 0;
+              display: block !important;
+              text-align: center;
+              font-size: 0;
+              strong {
+                position: relative;
+                margin: 0;
+                padding: 14.5px 0;
+                cursor: pointer;
+                border-bottom: 1px solid #707070;
+                display: block;
+                text-align: center;
+                margin-bottom: 15px;
+                &:after {
+                  content: "";
+                  background-image: url(../img/arrows.png);
+                  background-size: 12px;
+                  width: 20px;
+                  display: inline-block;
+                  color: white;
+                  height: 20px;
+                  background-repeat: no-repeat;
+                  position: relative;
+                  top: 10px;
+                  left: 12px;
+                }
+              }
+              &.active {
+                font-size: 14px;
+                border-bottom: 1px solid #707070;
+                padding-bottom: 15px;
+                strong {
+                  border-bottom: 1px solid transparent;
+                  &:after {
+                    transform: rotateX(180deg);
+                    top: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .footer-info-heading {
+          padding: 0;
+          margin: 8px 0 11px;
+          border-bottom: 0;
+        }
+      }
+      .footer-info-heading {
+        position: relative;
+        margin: 0;
+        padding: 14.5px 0;
+        cursor: pointer;
+        border-bottom: 1px solid #707070;
+        .icon.arrow-down {
+          margin-left: 13px;
+          width: 9px;
+        }
+        &.active {
+          border-bottom: 1px solid transparent;
+          .icon.arrow-down {
+            transform: rotateX(180deg);
+          }
+          & + .footer-info-list {
+            border-bottom: 1px solid #707070;
+          }
+        }
+      }
+      .footer-info-list {
+        display: none;
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1199px) {
+  .footer {
+    .footer-info-col {
+      width: 22%;
+    }
+    .footer-info-col--subscription {
+      width: 34%;
+    }
+  }
+}

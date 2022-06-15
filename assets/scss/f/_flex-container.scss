@@ -99,10 +99,11 @@
                 width: 100%;
             }
 
-            @include breakpoint(1920px) {
-                height: remCalc(500px);
-                min-height: 0;
-            }
+            // onlinevisions customisation
+            // @include breakpoint(1920px) {
+            //     height: remCalc(500px);
+            //     min-height: 0;
+            // }
         }
     }
 

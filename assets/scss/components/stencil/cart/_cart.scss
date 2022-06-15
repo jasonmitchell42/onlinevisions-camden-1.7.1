@@ -236,6 +236,8 @@ $cart-item-label-offset:                $cart-thumbnail-maxWidth + $cart-item-sp
     margin-bottom: spacing("eighth");
 }
 
+@import 'cart-onlinevisions';
+
 .cart-item-name {
     font-size: fontSize("smaller");
     margin: 0;

@@ -1,0 +1,149 @@
+@media (max-width:800px) {
+    div.snize-ac-results.snize-ac-results-mobile {
+        li.snize-mobile-top-panel {
+            outline: 0 !important;
+            .snize-close-button {
+                background: #cb464f;
+                .snize-close-button-arrow {
+                    background-image: url(../img/icon-arrow-left-white.png);
+                    margin-top: 5px;
+                }
+            }
+            form {
+                outline: none !important;
+                .snize-search {
+                    outline: none !important; 
+                }
+            }
+            .snize-input-style.snize-mobile-input-style {
+                outline: none !important;
+                &:active,&:focus {
+                    outline: none !important;
+                }
+            }
+        }
+    }
+    .template-pages-home {
+        .header {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+    .header {
+        padding-top: 8px;
+        padding-bottom: 3px;
+        .mobileMenu-toggle {
+            &.is-open {
+                .mobileMenu-toggleIcon {
+                    background: transparent;
+                }
+            }
+            .mobileMenu-toggleIcon {
+                background: black;
+                &:before {
+                    background: black;
+                }
+                &::after {
+                    background: black;
+                }
+            }
+        } 
+        .navPage-subMenu-item-child .navPage-subMenu-action.is-open {
+            background: black;
+        }
+        .header__inner {
+            .navUser-item {
+                &.navUser-item--account {
+                    .top-utilities-icon {
+                        width: 25px;
+                        height: 20px;
+                    }
+                }
+                &.navUser-item--cart {
+                    .navUser-action {
+                        padding: 0;
+                    }
+                    .top-utilities-icon {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+            .search#quickSearch {
+                order: 2;
+                width: 24px;
+                margin-left: auto;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .search-button-icons.icon-search-mobile {
+                    position: absolute;
+                    pointer-events: none;
+                    width: 24px;
+                    height: 31px;
+                    z-index: 99;
+                    top: 18px;
+                    left: 0;
+                    svg {
+                        width: 20px;
+                        height: 18px;
+                        cursor: pointer;
+                    }
+                }
+                .form {
+                    opacity: 0;
+                }
+                .form-input {
+                    padding: 0;
+                    cursor: pointer;
+                }
+                .search-button {
+                    display: none;
+                }
+            }
+            .navUser {
+                margin-left: 0;
+            }
+        }
+        .header__inner {
+            .header-logo {
+                margin-left: 39px;
+                & > a {
+                    padding: 3px 0;
+                    .header-logo-text {
+                        .header-logo-image {
+                            max-height: none;
+                        }
+                    }
+                }
+            }
+        }
+        .header__bottom-nav  {
+            .navPages-container {
+                .navPage-subMenu {
+                    background: black;
+                }
+                .navPages {
+                    background: black;
+                    a.is-open .navPages-action-moreIcon svg {
+                        fill: #fff;
+                        stroke: #fff;
+                    }
+                    .navPages-action {
+                        color: #fff;
+                        &:hover .navPages-action-moreIcon svg {
+                            fill: #fff;
+                            stroke: #fff;
+                        }
+                        svg {
+                            stroke: #fff;
+                            color: #fff;
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

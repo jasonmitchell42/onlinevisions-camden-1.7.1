@@ -1,0 +1,171 @@
+
+// page checkout customize 
+$base-color-input: black;
+
+@media (max-width:800px) {
+    .checkoutHeader.optimizedCheckout-header {
+        background: #ccc6bf;
+        .checkoutHeader-content {
+            padding: 12px 0 10px;
+        }
+        .checkoutHeader-link {
+            display: block;
+            img {
+                display: block;
+                max-width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+    .ReactModalPortal {
+        a {
+            color: #cb464f;
+        }
+    }
+    #checkout-app {
+        a {
+            color: #cb464f;
+        }
+        .form-checkbox {
+            & + .form-label::after {
+                background-color: $base-color-input;
+            }
+            &:checked + .form-label::before {
+                background-color: $base-color-input;
+                border-color: $base-color-input;
+            }
+            &:focus + .form-label::before {
+                box-shadow: none;
+                border-color: $base-color-input;
+            }
+        }
+        .optimizedCheckout-step {
+            background-color: black;
+            &.stepHeader-counter--complete {
+                background-color: green;
+            }
+        }
+        .optimizedCheckout-buttonPrimary,button {
+            background-color: #fff;
+            border-color: black;
+            color: black;
+            &:hover {
+                background-color: #EEEEEE;
+            }
+        }
+
+        .optimizedCheckout-form-checkbox:checked + .optimizedCheckout-form-label::before {
+            background-color: $base-color-input;
+            border-color: $base-color-input;
+            color: white;
+            box-shadow: none;
+        }
+
+        .optimizedCheckout-form-checklist-checkbox:checked {
+            & ~ .form-label::before {
+                border-color: $base-color-input;
+            }
+            & ~ .form-label::after {
+                background:$base-color-input;
+            }
+        }
+
+
+    }
+}
+
+@media (min-width:801px) {
+    .checkoutHeader.optimizedCheckout-header {
+        background: #ccc6bf;
+        .checkoutHeader-content {
+            padding: 12px 0 10px;
+        }
+        .checkoutHeader-link {
+            display: block;
+            img {
+                display: block;
+                max-width: 20%;
+                width: 100%;
+            }
+        }
+    }
+    .ReactModalPortal {
+        a {
+            color: #cb464f;
+        }
+    }
+    #checkout-app {
+        a {
+            color: #cb464f;
+        }
+        .optimizedCheckout-buttonSecondary:focus, .optimizedCheckout-buttonSecondary:hover {
+            border-color: black;
+        }
+        .form-checkbox {
+            & + .form-label::after {
+                background-color: $base-color-input;
+            }
+            &:checked + .form-label::before {
+                background-color: $base-color-input;
+                border-color: $base-color-input;
+            }
+            &:focus + .form-label::before {
+                box-shadow: none;
+                border-color: $base-color-input;
+            }
+        }
+        .optimizedCheckout-step {
+            background-color: black;
+            &.stepHeader-counter--complete {
+                background-color: green;
+            }
+        }
+        .optimizedCheckout-buttonPrimary,button {
+            background-color: #fff;
+            border-color: black;
+            color: black;
+            &:hover {
+                background-color: #EEEEEE;
+            }
+        }
+
+        .optimizedCheckout-form-checkbox:checked + .optimizedCheckout-form-label::before {
+            background-color: $base-color-input;
+            border-color: $base-color-input;
+            color: white;
+            box-shadow: none;
+        }
+
+        .optimizedCheckout-form-checklist-checkbox:checked {
+            & ~ .form-label::before {
+                border-color: $base-color-input;
+            }
+            & ~ .form-label::after {
+                background:$base-color-input;
+            }
+        }
+
+    }
+}
+
+/*
+DAS-56
+Only show Mastercard, Visa and Paypal on payment gateway
+*/
+.cardIcon-icon {
+    &[data-test='credit-card-icon-american-express'],
+    &[data-test='credit-card-icon-diners-club'],
+    &[data-test='credit-card-icon-discover'],
+    &[data-test='credit-card-icon-maestro'],
+    &[data-test='credit-card-icon-jcb'] {
+        display: none !important;
+    }
+}
+
+
+.cart-section {
+    .cart-priceItem--total .cart-priceItem-value {
+        color: black;
+        font-weight: 700;
+    }
+}
