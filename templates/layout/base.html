@@ -52,21 +52,21 @@
             {{#if theme_settings.restrict_to_login '===' 2}}
                 {{#and theme_settings.restrict_new_accounts (if customer_group_id '===' 0)}}
                     {{#or (if page_type '===' 'page') (if page_type '===' 'page_contact_form') (if page_type '===' 'newsletter_subscribe') (if page_type '===' 'createaccount') (if page_type '===' 'forgotpassword') (if page_type '===' 'getnewpassword')}}
-                        {{> components/common/body }}
+                        {{> components/onlinevisions/common/body }}
                     {{else}}
                         {{> components/f/b2b/body-lockdown }}
                     {{/or}}
                 {{else}}
-                    {{> components/common/body }}
+                    {{> components/onlinevisions/common/body }}
                 {{/and}}
             {{else}}
-                {{> components/common/body }}
+                {{> components/onlinevisions/common/body }}
             {{/if}}
         {{else}}
             {{> components/f/b2b/body-lockdown }}
         {{/or}}
 
-        {{> components/common/footer }}
+        {{> components/onlinevisions/common/footer }}
 
         <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
         <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
