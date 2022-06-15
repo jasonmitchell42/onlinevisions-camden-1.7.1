@@ -1656,6 +1656,38 @@
     "settings": [
       {
         "type": "heading",
+        "content": "Left menu categories"
+      },
+      {
+        "type": "text",
+        "label": "Category names",
+        "id": "left_menu_categories",
+        "force_reload": true
+      },
+      {
+        "type": "heading",
+        "content": "Right menu text"
+      },
+      {
+        "type": "text",
+        "label": "Text",
+        "id": "right_menu_text",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Phone",
+        "id": "right_menu_phone",
+        "force_reload": true
+      },
+      {
+        "type": "text",
+        "label": "Phone (text)",
+        "id": "right_menu_phone_text",
+        "force_reload": true
+      },
+      {
+        "type": "heading",
         "content": "Text based logo"
       },
       {
@@ -2149,6 +2181,12 @@
       {
         "type": "heading",
         "content": "Display Options"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show left sidebar",
+        "force_reload": true,
+        "id": "show_left_sidebar"
       },
       {
         "type": "select",
