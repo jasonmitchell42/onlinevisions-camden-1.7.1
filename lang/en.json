@@ -16,10 +16,10 @@
         }
     },
     "footer": {
-        "brands": "Popular Brands",
-        "navigate": "Pages",
+        "brands": "Shop by Brand",
+        "navigate": "Quick Links",
         "info": "Info",
-        "categories": "Categories",
+        "categories": "Shop by Category",
         "call_us": "Call us: {phone_number}"
     },
     "home": {
@@ -765,7 +765,8 @@
             },
             "contact": {
                 "email_address": "Please use a valid email address, such as user@example.com.",
-                "question": "You must enter your question."
+                "question": "You must enter your question.",
+                "phone": "You must enter a phone number"
             },
             "gift": {
                 "to_name": "You must enter a valid recipient name.",
@@ -898,7 +899,7 @@
         }
     },
     "invoice": {
-        "for_order": "{name} Invoice for Order #{id}",
+        "for_order": "{name} Tax Invoice for Order #{id}",
         "phone": "Phone: {number}",
         "email": "Email: {email}",
         "order": "Order:",
