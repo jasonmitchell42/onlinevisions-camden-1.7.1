@@ -26,6 +26,13 @@
         {{ getFontsCollection }}
         {{{stylesheet '/assets/css/theme.css'}}}
 
+        {{#if theme_settings.custom_store_css}}
+        <link href="{{cdn 'webdav:css/custom.css'}}?c={{random 999999 9999999}}" rel="stylesheet">
+        {{/if}}
+        {{#if theme_settings.developer_store_css}}
+        <link href="https://cdn.jsdelivr.net/gh/flair-themes/{{settings.store_hash}}/custom.css?c={{random 999999 9999999}}" rel="stylesheet">
+        {{/if}}
+
         {{{head.scripts}}}
         {{{head.rsslinks}}}
 
@@ -37,6 +44,8 @@
         {{inject 'cartId' cart_id}}
         {{inject 'template' template}}
         {{inject 'enableAnimations' theme_settings.enable_animations}}
+        {{inject 'navigationDesign' theme_settings.navigation_design}}
+        {{inject 'enableHoverNavigation' theme_settings.enable_hover_navigation}}
         {{{snippet 'htmlhead'}}}
         <meta name="google-site-verification" content="9wmV7zaA15QV9F8ZFb9dzRCzG8w6U_z9GwuvMj2tbNA" />
     </head>
@@ -48,26 +57,26 @@
             {{> components/common/cookie}}
         {{/and}}
 
-        {{> components/common/header-onlinevisions }}
+        {{> components/common/header }}
         {{#or customer (if theme_settings.restrict_to_login '!==' 2) (if page_type '===' 'page') (if page_type '===' 'page_contact_form') (if page_type '===' 'newsletter_subscribe') (if page_type '===' 'createaccount') (if page_type '===' 'forgotpassword') (if page_type '===' 'getnewpassword')}}
             {{#if theme_settings.restrict_to_login '===' 2}}
                 {{#and theme_settings.restrict_new_accounts (if customer_group_id '===' 0)}}
                     {{#or (if page_type '===' 'page') (if page_type '===' 'page_contact_form') (if page_type '===' 'newsletter_subscribe') (if page_type '===' 'createaccount') (if page_type '===' 'forgotpassword') (if page_type '===' 'getnewpassword')}}
-                        {{> components/common/body-onlinevisions }}
+                        {{> components/common/body }}
                     {{else}}
                         {{> components/f/b2b/body-lockdown }}
                     {{/or}}
                 {{else}}
-                    {{> components/common/body-onlinevisions }}
+                    {{> components/common/body }}
                 {{/and}}
             {{else}}
-                {{> components/common/body-onlinevisions }}
+                {{> components/common/body }}
             {{/if}}
         {{else}}
             {{> components/f/b2b/body-lockdown }}
         {{/or}}
 
-        {{> components/common/footer-onlinevisions }}
+        {{> components/common/footer }}
 
         <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
         <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
